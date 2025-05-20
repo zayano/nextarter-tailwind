@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next';
+import { env } from 'process';
 
 const manifest = (): MetadataRoute.Manifest => ({
-  short_name: 'nextarter-tailwind',
+  short_name: `${env.NEXT_PUBLIC_APP_NAME}`,
   name: 'Next.js App Template',
   lang: 'en',
   start_url: '/',
