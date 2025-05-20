@@ -5,16 +5,15 @@ import { fontSans } from '@/lib/styles/fonts';
 import { cn } from '@/lib/styles/utils';
 
 import '@/lib/styles/globals.css';
-
-const APP_NAME = 'nextarter-tailwind';
+import { env } from 'process';
 
 export const metadata: Metadata = {
-  title: APP_NAME,
-  description: 'Next.js + TailwindCSS v3 + TypeScript template',
-  applicationName: APP_NAME,
+  title: `${env.NEXT_PUBLIC_APP_NAME}`,
+  description: `${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
+  applicationName: `${env.NEXT_PUBLIC_APP_NAME}`,
   appleWebApp: {
     capable: true,
-    title: APP_NAME,
+    title: `${env.NEXT_PUBLIC_APP_NAME}`,
     statusBarStyle: 'default',
   },
   formatDetection: {
@@ -22,8 +21,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: 'https://nextarter-tailwind.sznm.dev',
-    title: 'nextarter-tailwind',
-    description: 'Next.js + TailwindCSS v3 + TypeScript template',
+    title: `${env.NEXT_PUBLIC_APP_NAME}`,
+    description: `${env.NEXT_PUBLIC_APP_DESCRIPTION}`,
     images: {
       url: 'https://og-image.sznm.dev/**nextarter-tailwind**.sznm.dev.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fsznm.dev%2Favataaars.svg&widths=250',
       alt: 'nextarter-tailwind.sznm.dev og-image',
